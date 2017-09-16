@@ -10,6 +10,7 @@ body {
   height: 100%;
 }
 body {
+  position: relative;
   background: $blanc url(img/circlefloow_3200.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -29,4 +30,56 @@ body {
   body {
     background-image: url(img/circlefloow_5200.jpg);
   }
+}
+
+.logo {
+  display: block;
+  width: rem(150);
+  height: rem(130);
+  position: absolute;
+  top: rem(30);
+  left: rem(30);
+  z-index: 1000;
+  fill: $blanc;
+}
+$logo_anim_time: 8;
+.logo_fig {
+  visibility: hidden;
+  animation: appear #{$logo_anim_time}s steps(7, end) infinite;
+}
+#fig2 {
+  animation-delay: #{1 * $logo_anim_time / 8}s;
+}
+#fig3 {
+  animation-delay: #{2 * $logo_anim_time / 8}s;
+}
+#fig4 {
+  animation-delay: #{3 * $logo_anim_time / 8}s;
+}
+#fig5 {
+  animation-delay: #{4 * $logo_anim_time / 8}s;
+}
+#fig6 {
+  animation-delay: #{5 * $logo_anim_time / 8}s;
+}
+#fig7 {
+  animation-delay: #{6 * $logo_anim_time / 8}s;
+}
+#fig8 {
+  animation-delay: #{7 * $logo_anim_time / 8}s;
+}
+
+@keyframes appear {
+  0% {
+    visibility: visible;
+  }
+  12.5% {
+    visibility: hidden;
+  }
+  // 100% {
+  //   opacity: 0;
+  // }
+  // to {
+  //   visibility: hidden;
+  // }
 }

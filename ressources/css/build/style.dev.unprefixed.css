@@ -290,6 +290,7 @@ body {
 }
 
 body {
+  position: relative;
   background: #fff url(img/circlefloow_3200.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -302,6 +303,58 @@ body {
 @media only screen and (min-height: 1599px) {
   body {
     background-image: url(img/circlefloow_5200.jpg);
+  }
+}
+.logo {
+  display: block;
+  width: 9.375rem;
+  height: 8.125rem;
+  position: absolute;
+  top: 1.875rem;
+  left: 1.875rem;
+  z-index: 1000;
+  fill: #fff;
+}
+
+.logo_fig {
+  visibility: hidden;
+  animation: appear 8s steps(7, end) infinite;
+}
+
+#fig2 {
+  animation-delay: 1s;
+}
+
+#fig3 {
+  animation-delay: 2s;
+}
+
+#fig4 {
+  animation-delay: 3s;
+}
+
+#fig5 {
+  animation-delay: 4s;
+}
+
+#fig6 {
+  animation-delay: 5s;
+}
+
+#fig7 {
+  animation-delay: 6s;
+}
+
+#fig8 {
+  animation-delay: 7s;
+}
+
+@keyframes appear {
+  0% {
+    visibility: visible;
+  }
+  12.5% {
+    visibility: hidden;
   }
 }
 

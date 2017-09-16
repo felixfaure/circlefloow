@@ -298,6 +298,7 @@ body {
 }
 
 body {
+  position: relative;
   background: #fff url(img/circlefloow_3200.jpg) no-repeat center center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -311,6 +312,92 @@ body {
 @media only screen and (min-height: 1599px) {
   body {
     background-image: url(img/circlefloow_5200.jpg);
+  }
+}
+.logo {
+  display: block;
+  width: 9.375rem;
+  height: 8.125rem;
+  position: absolute;
+  top: 1.875rem;
+  left: 1.875rem;
+  z-index: 1000;
+  fill: #fff;
+}
+
+.logo_fig {
+  visibility: hidden;
+  -webkit-animation: appear 8s steps(7, end) infinite;
+       -o-animation: appear 8s steps(7, end) infinite;
+          animation: appear 8s steps(7, end) infinite;
+}
+
+#fig2 {
+  -webkit-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#fig3 {
+  -webkit-animation-delay: 2s;
+       -o-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+#fig4 {
+  -webkit-animation-delay: 3s;
+       -o-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+#fig5 {
+  -webkit-animation-delay: 4s;
+       -o-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+#fig6 {
+  -webkit-animation-delay: 5s;
+       -o-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+#fig7 {
+  -webkit-animation-delay: 6s;
+       -o-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+#fig8 {
+  -webkit-animation-delay: 7s;
+       -o-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    visibility: visible;
+  }
+  12.5% {
+    visibility: hidden;
+  }
+}
+
+@-o-keyframes appear {
+  0% {
+    visibility: visible;
+  }
+  12.5% {
+    visibility: hidden;
+  }
+}
+
+@keyframes appear {
+  0% {
+    visibility: visible;
+  }
+  12.5% {
+    visibility: hidden;
   }
 }
 
