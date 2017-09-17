@@ -117,6 +117,44 @@ html {
 }
 
 /* ==========================================================================
+   >>HELPERS TYPOS
+   ========================================================================== */
+/* Allignement du texte */
+.txt-l {
+  text-align: left;
+}
+
+.txt-r {
+  text-align: right;
+}
+
+.txt-c {
+  text-align: center;
+}
+
+.txt-j {
+  text-align: justify;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+/* Mise en forme */
+.txt-uc {
+  text-transform: uppercase;
+}
+
+.txt-lc {
+  text-transform: none;
+}
+
+.txt-b {
+  font-weight: 700;
+}
+
+/* ==========================================================================
    >>HELPERS BLOCS
    ========================================================================== */
 /* Cover, contain */
@@ -167,22 +205,22 @@ html {
 
 body {
   width: 100%;
-  background-color: #fff;
-  color: #000;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background-color: #FF7BAC;
+  color: #fff;
+  font-family: "poppins", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.22;
 }
 
 /* S├®lection */
 ::-moz-selection {
-  background: #00bf94;
+  background: #5FDFD4;
   text-shadow: none;
   color: #fff;
 }
 
 ::selection {
-  background: #00bf94;
+  background: #5FDFD4;
   text-shadow: none;
   color: #fff;
 }
@@ -299,9 +337,27 @@ body {
 
 body {
   position: relative;
-  background: #fff url(img/circlefloow_3200.jpg) no-repeat center center;
+  background: #fff url(img/circlefloow_3200.jpg) no-repeat top center;
   -webkit-background-size: cover;
           background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+body:after {
+  content: " ";
+  display: block;
+  width: 60%;
+  width: 130vh;
+  max-width: 100%;
+  height: 53.78%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: -webkit-gradient(linear, left top, right top, from(#ff7bac), to(rgba(255, 123, 172, 0)));
+  background: -webkit-linear-gradient(left, #ff7bac 0%, rgba(255, 123, 172, 0) 100%);
+  background: -o-linear-gradient(left, #ff7bac 0%, rgba(255, 123, 172, 0) 100%);
+  background: linear-gradient(to right, #ff7bac 0%, rgba(255, 123, 172, 0) 100%);
 }
 
 @media only screen and (min-height: 1218px) {
@@ -315,13 +371,28 @@ body {
   }
 }
 .logo {
-  display: block;
-  width: 9.375rem;
-  height: 8.125rem;
+  width: 5rem;
+  width: 14vh;
+  min-width: 5rem;
   position: absolute;
-  top: 1.875rem;
-  left: 1.875rem;
+  top: 0;
+  margin-top: 1.95%;
+  right: 1.95%;
   z-index: 1000;
+}
+.logo:after {
+  content: " ";
+  display: block;
+  padding-top: 86.666667%;
+}
+
+.logo_svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   fill: #fff;
 }
 
@@ -398,6 +469,86 @@ body {
   }
   12.5% {
     visibility: hidden;
+  }
+}
+.main,
+.footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding-left: 1.95%;
+  padding-right: 1.95%;
+  z-index: 500;
+}
+
+.main {
+  top: 0;
+  margin-top: 1.95%;
+}
+
+.title {
+  line-height: 1;
+  font-size: 2.6875rem;
+  font-size: 10.23vh;
+}
+
+.sTitle {
+  max-width: 20em;
+  margin-top: .4em;
+  font-size: 0.75rem;
+  font-size: 3.08vh;
+}
+
+.footer {
+  top: 53.78%;
+  margin-top: 1.95%;
+  font-size: 0.625rem;
+  font-size: 2.57vh;
+}
+.footer li {
+  margin-bottom: .1em;
+}
+.footer li:last-child {
+  margin-bottom: 0;
+}
+.footer a:hover, .footer a:focus {
+  text-decoration: underline;
+}
+
+@media only screen and (min-aspect-ratio: 2600 / 989) {
+  body:after {
+    height: 100%;
+    height: 20.43vw;
+  }
+}
+@media only screen and (max-aspect-ratio: 25 / 30) {
+  body:after {
+    width: 100%;
+  }
+
+  .logo {
+    width: 16.8vw;
+  }
+
+  .title {
+    font-size: 12.276vw;
+  }
+
+  .sTitle {
+    font-size: 3.696vw;
+  }
+
+  .footer {
+    font-size: 3.084vw;
+  }
+}
+@media only screen and (max-height: 24.319066em), only screen and (max-width: 20.265888em) {
+  .sTitle {
+    font-size: 0.75rem;
+  }
+
+  .footer {
+    font-size: 0.625rem;
   }
 }
 
