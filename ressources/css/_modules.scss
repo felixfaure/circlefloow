@@ -13,51 +13,20 @@ body {
 }
 body {
   position: relative;
-  background: $blanc url(img/circlefloow_3200.jpg) no-repeat top center;
-  background-size: cover;
+  background: $bg-color-body url(img/bg_3000.png) no-repeat center center;
+  background-size: 100% auto;
   background-attachment: fixed;
   overflow: hidden;
-  &:after {
-    content: " ";
-    display: block;
-    width: 60%;
-    width: 130vh;
-    max-width: 100%;
-    height: 53.78%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: linear-gradient(to right, rgba($couleur1,1) 0%,rgba($couleur1,0) 100%);
-  }
-}
-
-// 5200*1978
-// 4200*1598
-// 3200*1217
-// 2200*837
-// 1200*457
-@media only screen and (min-height: 1218px) {
-  body {
-    background-image: url(img/circlefloow_4200.jpg);
-  }
-}
-
-@media only screen and (min-height: 1599px) {
-  body {
-    background-image: url(img/circlefloow_5200.jpg);
-  }
+  text-align: center;
 }
 
 .logo {
-  width: rem(80);
-  width: 14vh;
-  min-width: rem(80);
-  position: absolute;
-  top: 0;
-  margin-top: $pad;
-  right: $pad;
-  z-index: 1000;
+  width: 26.8%;
+  // min-width: rem(80);
+  position: relative;
+  margin: auto;
+  // margin-bottom: 4.8vh;
+  margin-bottom: 2.5vw;
   &:after {
     content: " ";
     display: block;
@@ -107,49 +76,43 @@ $logo_anim_time: 8;
   12.5% {
     visibility: hidden;
   }
-  // 100% {
-  //   opacity: 0;
-  // }
-  // to {
-  //   visibility: hidden;
-  // }
-}
-
-.main,
-.footer {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding-left: $pad;
-  padding-right: $pad;
-  z-index: 500;
 }
 
 .main {
-  top: 0;
-  margin-top: $pad;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: rem(-30);
+  // margin-top: calc(-1.1vw - 1.875rem);
+  z-index: 1000;
 }
-.title {
-  line-height: 1;
-  font-size: rem(43); //68
-  font-size: 10.23vh;
+
+.t {
+  text-transform: uppercase;
+  letter-spacing: 0.35vw;
+  font-size: 1.3vw;
 }
-.sTitle {
-  max-width: 20em;
-  margin-top: .4em;
-  font-size: rem(12); //18
-  font-size: 3.08vh;
+
+.st {
+  margin-top: 1.5vw;
+  font-size: 1.2vw;
 }
 
 .footer {
-  top: 53.78%;
-  margin-top: $pad;
-  font-size: rem(10);
-  font-size: 2.57vh;
+  position: absolute;
+  bottom: rem(30);
+  left: 0;
+  width: 100%;
+  z-index: 1500;
+  // font-size: rem(14);
+  font-size: 1.1vw;
   li {
-    margin-bottom: .1em;
+    display: inline-block;
+    margin-right: 3vw;
     &:last-child {
-      margin-bottom: 0;
+      margin-right: 0;
     }
   }
   a {
@@ -157,47 +120,5 @@ $logo_anim_time: 8;
     &:focus {
       text-decoration: underline;
     }
-  }
-}
-
-
-@media only screen and (min-aspect-ratio: 2600/989) {
-  body {
-    &:after {
-      height: 100%;
-      height: 20.43vw;
-    }
-  }
-}
-
-@media only screen and (max-aspect-ratio: 25/30) {
-  body {
-    &:after {
-      width: 100%;
-    }
-  }
-
-  .logo {
-    width: 14vw * 1.2;
-  }
-
-  .title {
-    font-size: 10.23vw * 1.2;
-  }
-  .sTitle {
-    font-size: 3.08vw * 1.2;
-  }
-
-  .footer {
-    font-size: 2.57vw * 1.2;
-  }
-}
-
-@media only screen and (max-height: em(10 * 100 / 2.57)), only screen and (max-width: em(10 * 100 / (2.57 * 1.2))) {
-  .sTitle {
-    font-size: rem(12);
-  }
-  .footer {
-    font-size: rem(10);
   }
 }

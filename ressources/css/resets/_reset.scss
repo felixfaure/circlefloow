@@ -19,13 +19,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, datagrid, datalist, details, dialog, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
 	display: block;
 }
-// audio, canvas, progress, video {
-// 	display: inline-block;
-// 	vertical-align: baseline;
-// }
-// abbr, eventsource, mark, meter, time, output, bb {
-// 	display: inline;
-// }
 
 /* --------------------------------------------------------------------------
    ->Images, iframes
@@ -52,21 +45,6 @@ svg:not(:root) {
 /* --------------------------------------------------------------------------
    ->Autres éléments
    -------------------------------------------------------------------------- */
-// /* Tables */
-// table {
-// 	border-collapse: collapse;
-// 	border-spacing: 0;
-// }
-// th {
-// 	text-align: left;
-// }
-
-// /* Audio */
-// audio:not([controls]) {
-// 	display: none;
-// 	height: 0;
-// }
-
 /* Links (Remove the gray background color from active links in IE 10) */
 a {
 	background-color: transparent;
