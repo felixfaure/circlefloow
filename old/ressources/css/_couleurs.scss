@@ -1,0 +1,39 @@
+//Couleurs basiques
+//=================
+$noir: #000;
+$blanc: #fff;
+$gris: #F6F6F6;
+$jaune: #ff0;
+$rouge: #cb1d1d;
+
+//Couleurs principales du projet
+//==============================
+$couleur1: #FF7BAC;
+$couleur2: #5FDFD4;
+// $couleur3: #5FDFD4;
+
+//Couleurs générales
+//==================
+$bg-color-body: $couleur1;
+$color-txt-body: $blanc;
+
+//Couleur des boutons (.btn)
+//==========================
+$bg-color-btn: $noir;
+$bg-color-btn-hover: $couleur1;
+$color-txt-btn: $blanc;
+$color-txt-btn-hover: $blanc;
+
+//Couleurs des liens
+//==================
+$color-links: $couleur1;
+$color-links-hover: $noir;
+
+//Couleur de la sélection
+//=======================
+$couleur-selection-bg: $couleur2;
+$couleur-selection-ft: $blanc;
+
+//Couleur des hr, quote, etc.
+//===========================
+$couleur-ligne: $couleur1;

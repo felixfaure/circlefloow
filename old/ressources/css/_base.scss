@@ -1,0 +1,60 @@
+/* ==========================================================================
+   >>BASE
+   ========================================================================== */
+html {
+	width: 100%;
+	font-size: 100%; /* 16px dans la plupart des navigateurs */
+	-webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+	width: 100%;
+	background-color: $bg-color-body;
+	color: $color-txt-body;
+	font-family: $font-default;
+	font-size: 1em;
+	line-height: $line-height-base;
+}
+
+/* Sélection */
+@include selection {
+  background: $couleur-selection-bg;
+  text-shadow: none;
+	color: $couleur-selection-ft;
+}
+
+/* Empécher le débordement */
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video,
+svg {
+	max-width: 100%;
+}
+
+/* Casser les chaines trop longues */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+textarea,
+p,
+li {
+	word-wrap: break-word;
+}
+
+/* fix viewport pour Win8 (snap mode) et préparer le jour où le viewport sera supporté */
+@-webkit-viewport{ width: device-width }
+@-moz-viewport{ width: device-width }
+@-ms-viewport{ width: device-width }
+@-o-viewport{ width: device-width }
+@viewport{ width: device-width }

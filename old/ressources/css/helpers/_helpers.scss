@@ -1,0 +1,13 @@
+/* ==========================================================================
+   >>HELPERS
+   ========================================================================== */
+/* Clearfix */
+.cf {
+	@include clearfix;
+}
+
+/* Masquage accessible */
+/* http://hugogiraudel.com/2016/10/13/css-hide-and-seek/ */
+.srOnly {
+  @include srOnly;
+}

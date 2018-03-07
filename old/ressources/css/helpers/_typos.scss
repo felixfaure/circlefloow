@@ -1,0 +1,60 @@
+/* ==========================================================================
+   >>HELPERS TYPOS
+   ========================================================================== */
+/* Allignement du texte */
+.txt-l   { text-align: left; }
+.txt-r  { text-align: right; }
+.txt-c { text-align: center; }
+.txt-j {
+	text-align: justify;
+	word-wrap: break-word;
+	hyphens: auto;
+}
+
+/* Mise en forme */
+.txt-uc {
+	text-transform: uppercase;
+}
+.txt-lc {
+	text-transform: none;
+}
+// .txt-it {
+// 	font-style: italic;
+// }
+.txt-b {
+	font-weight: 700;
+}
+// .txt-lt {
+// 	font-weight: 300;
+// }
+// .txt-reg {
+// 	font-weight: 400;
+// }
+// .txt-s {
+// 	text-decoration: underline;
+// }
+// .txt-line {
+// 	text-decoration: line-through;
+// }
+
+// /* Fonts */
+// .txt-f1 {
+// 	font-family: $font-default;
+// }
+// .txt-f2 {
+// 	font-family: $font-secondaire;
+// }
+
+// /* Couleurs */
+// .txt-white {
+// 	color: $blanc;
+// }
+// .txt-black {
+// 	color: $noir;
+// }
+// .txt-red {
+// 	color: $rouge;
+// }
+// .txt-grey {
+// 	color: $gris;
+// }

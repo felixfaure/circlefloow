@@ -1,0 +1,184 @@
+//=============================================
+//Clearfix :
+//=============================================
+@mixin clearfix {
+	&:after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+}
+
+
+//=============================================
+//Screen reader only :
+//=============================================
+@mixin srOnly {
+	position: absolute;
+	height: 1px!important;
+  width: 1px!important;
+  clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+  overflow: hidden;
+  // margin: -1px;
+  padding: 0;
+  border: 0;
+	white-space: nowrap;
+}
+
+
+//=============================================
+//Vendor prefixes :
+//=============================================
+@mixin vendor-prefix($property, $value, $prefixes: webkit moz ms o) {
+  @if $prefixes {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+  }
+  #{$property}: $value;
+}
+
+
+//=============================================
+//Sélection :
+//=============================================
+@mixin selection($current-selector: false) {
+  @if $current-selector {
+    &::-moz-selection {
+      @content;
+    }
+    &::selection {
+      @content;
+    }
+  } @else {
+    ::-moz-selection {
+      @content;
+    }
+    ::selection {
+      @content;
+    }
+  }
+}
+
+
+//=============================================
+//RGBA (color & background color) :
+//=============================================
+@mixin color-opacity($color, $opacity: 0.9) {
+  color: $color; /* The Fallback */
+  color: rgba($color, $opacity);
+}
+
+@mixin background-opacity($color, $opacity: 0.9) {
+  background-color: $color; /* The Fallback */
+  background-color: rgba($color, $opacity);
+}
+
+
+//=============================================
+//REM :
+//=============================================
+@mixin rem($value, $base: $taille-base) {
+  font-size: $value * 1px; /* The Fallback */
+  font-size: ($value / $base) * 1rem;
+}
+
+
+//=============================================
+//Placeholder :
+//=============================================
+@mixin placeholder($current-selector: false) {
+  $placeholders: "::-webkit-input" ":-moz" "::-moz" ":-ms-input";
+	@if $current-selector {
+		@each $placeholder in $placeholders {
+      &#{$placeholder}-placeholder {
+        @content;
+      }
+	  }
+  } @else {
+		@each $placeholder in $placeholders {
+      #{$placeholder}-placeholder {
+        @content;
+      }
+	  }
+  }
+}
+
+
+//=============================================
+//Media query en em
+//=============================================
+@mixin mq($value: false, $query-type: 'max') {
+  @if $query-type == "max" {
+    @media only screen and (max-width: em($value)) {
+      @content;
+    }
+  }
+
+  @else if $query-type == "min" {
+    @media only screen and (min-width: em($value)) {
+      @content;
+    }
+  }
+
+	@else if $query-type == "max-height" {
+    @media only screen and (max-height: em($value)) {
+      @content;
+    }
+  }
+
+	@else if $query-type == "min-height" {
+    @media only screen and (min-height: em($value)) {
+      @content;
+    }
+  }
+
+  @else if $query-type == "hdpi" {
+    @media only screen and (-webkit-min-device-pixel-ratio: $ratioHDPI),
+    only screen and (min--moz-device-pixel-ratio: $ratioHDPI),
+    only screen and (-o-min-device-pixel-ratio: #{$ratioHDPI}/1),
+    only screen and (min-resolution: round($ratioHDPI * 96dpi)),
+    only screen and (min-resolution: $ratioHDPI * 1dppx) {
+      @content;
+    }
+  }
+
+	@else if $query-type == "orientation" {
+    @media all and (orientation: $value) {
+      @content;
+    }
+  }
+
+	@else if $query-type == "min-ratio" {
+    @media screen and (min-aspect-ratio: $value) {
+      @content;
+    }
+  }
+
+	@else if $query-type == "max-ratio" {
+    @media screen and (max-aspect-ratio: $value) {
+      @content;
+    }
+  }
+
+  @else  {
+    @warn "Type non supported.";
+  }
+}
+
+
+//=============================================
+//Mixins pour le rythme vertical :
+//=============================================
+@mixin flow-hr( $value, $type-vr: $vertical-rythm ){
+	font-size: em($value);
+	line-height: line-height($value, $type-vr);
+	margin: margin-em($value, $type-vr) ;
+}
+
+@mixin flow-other( $value, $type-vr: $vertical-rythm ){
+	font-size: em($value);
+	line-height: line-height($value, $type-vr);
+	margin: margin-em-other($value, $type-vr) ;
+}

@@ -1,0 +1,57 @@
+/* ==========================================================================
+   >>TYPO
+   ========================================================================== */
+/* --------------------------------------------------------------------------
+   ->mise en forme du texte
+   -------------------------------------------------------------------------- */
+/* Gras et italique */
+b, strong {
+  font-weight: 700;
+}
+i, em {
+	font-style: italic;
+}
+
+/* Indice et exposant */
+sub, sup {
+  position: relative;
+  font-size: .75em;
+  vertical-align: 0;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: .5ex;
+}
+
+/* --------------------------------------------------------------------------
+   ->liens
+   -------------------------------------------------------------------------- */
+/* Rappel : l'ordre des pseudo-classes doit être : link > visited > hover/focus > active */
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	transition: color .25s;
+	// &:hover,
+	// &:focus,
+	// &:active {
+	// 	color: inherit;
+	// }
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   ->listes à puces et numérotées
+   -------------------------------------------------------------------------- */
+ul,
+ol {
+	list-style: none;
+}
