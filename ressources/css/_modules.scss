@@ -123,10 +123,21 @@ $logo_anim_time: 8;
   }
 }
 
+@include mq(1025) {
+  body {
+    background-image: url(img/bg_2050.png);
+  }
+}
+
+@include mq(500) {
+  body {
+    background-image: url(img/bg_1000.png);
+  }
+}
+
 @include mq('1/1',"max-ratio") {
   body {
-    position: relative;
-    background-image: url(img/bg_3000-portrait.png);
+    background-image: url(img/bg_h3000-portrait.png);
     background-size: auto 100%;
   }
 
@@ -186,5 +197,17 @@ $logo_anim_time: 8;
     li {
       margin-right: 5vh;
     }
+  }
+}
+
+@media screen and (max-aspect-ratio: 1/1) and (max-height: em(1025)) {
+  body {
+    background-image: url(img/bg_h2050-portrait.png);
+  }
+}
+
+@media screen and (max-aspect-ratio: 1/1) and (max-height: em(500)) {
+  body {
+    background-image: url(img/bg_h1000-portrait.png);
   }
 }

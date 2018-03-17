@@ -424,10 +424,19 @@ body {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 64.0625em) {
+  body {
+    background-image: url(img/bg_2050.png);
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  body {
+    background-image: url(img/bg_1000.png);
+  }
+}
 @media screen and (max-aspect-ratio: 1 / 1) {
   body {
-    position: relative;
-    background-image: url(img/bg_3000-portrait.png);
+    background-image: url(img/bg_h3000-portrait.png);
     -webkit-background-size: auto 100%;
             background-size: auto 100%;
   }
@@ -490,6 +499,16 @@ body {
   }
   .footer li {
     margin-right: 5vh;
+  }
+}
+@media screen and (max-aspect-ratio: 1 / 1) and (max-height: 64.0625em) {
+  body {
+    background-image: url(img/bg_h2050-portrait.png);
+  }
+}
+@media screen and (max-aspect-ratio: 1 / 1) and (max-height: 31.25em) {
+  body {
+    background-image: url(img/bg_h1000-portrait.png);
   }
 }
 
