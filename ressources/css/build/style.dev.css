@@ -511,5 +511,87 @@ body {
     background-image: url(img/bg_h1000-portrait.png);
   }
 }
+/* ==========================================================================
+   >>PRINT
+   ========================================================================== */
+@media print {
+  /* G├®n├®ral */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  /* Liens, abbr */
+  a[href]:after,
+  a[href]:after {
+    content: " : " attr(href);
+  }
+
+  /* Pas pour images (classe ├á ajout├®e...), liens internes et js */
+  a[href^="mailto:"]:after {
+    content: "";
+  }
+
+  a[href^="mailto:"]:before {
+    content: "Email : ";
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .main,
+  .footer {
+    position: static;
+  }
+
+  .main {
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+
+  h1.srOnly {
+    position: static;
+    height: auto !important;
+    width: auto !important;
+    clip: none;
+    -webkit-clip-path: none;
+            clip-path: none;
+    white-space: normal;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+
+  .t {
+    margin-top: .5rem;
+    letter-spacing: .1em;
+    font-size: 1.125em;
+  }
+
+  .st {
+    margin-top: .5rem;
+    font-size: 1em;
+  }
+
+  .footer {
+    margin-top: 5rem;
+    font-size: 0.875em;
+  }
+
+  .footer li {
+    display: block;
+    margin-right: 0;
+  }
+}
 
 /*# sourceMappingURL=style.dev.css.map */

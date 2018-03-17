@@ -5,7 +5,7 @@
     /* Général */
     * {
         background: transparent !important;
-        //color: #000 !important; /* Black prints faster: h5bp.com/s */
+        color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -15,53 +15,56 @@
     }
 
     /* Liens, abbr */
-    p a[href]:after,
-    .p a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    p abbr[title]:after,
-    .p abbr[title]:after {
-        content: " (" attr(title) ")";
+    a[href]:after,
+    a[href]:after {
+        content: " : " attr(href);
     }
     /* Pas pour images (classe à ajoutée...), liens internes et js */
-    p .linkWithNoTxt a:after,
-    p a[href^="javascript:"]:after,
-    p a[href^="#"]:after,
-    .p .linkWithNoTxt a:after,
-    .p a[href^="javascript:"]:after,
-    .p a[href^="#"]:after {
+    a[href^="mailto:"]:after {
         content: "";
     }
-
-    /* Gestion des débordement de page */
-    pre,
-    blockquote,
-    ul,
-    ol,
-    tr,
-    img {
-        page-break-inside: avoid;
+    a[href^="mailto:"]:before {
+        content: "Email : ";
     }
 
-    h1,
-    h2,
-    h3,
-    caption {
-        page-break-after: avoid;
+    .logo {
+      display: none;
     }
-
-    /* En tete de table */
-    thead {
-        display: table-header-group; /* h5bp.com/t */
+    .main,
+    .footer {
+      position: static;
     }
-
-    /* Veuves et orphelins */
-    p,
-    .p,
-    blockquote,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
+    .main {
+      transform: none;
+      margin-top: 0;
+      padding-top: rem(80);
+    }
+    h1.srOnly {
+      position: static;
+    	height: auto!important;
+      width: auto!important;
+      clip: none;
+    	clip-path: none;
+    	white-space: normal;
+      text-transform: uppercase;
+      font-size: em(24);
+    }
+    .t {
+      // text-transform: uppercase;
+      margin-top: .5rem;
+      letter-spacing: .1em;
+      font-size: em(18);
+    }
+    .st {
+      margin-top: .5rem;
+      font-size: em(16);
+    }
+    .footer {
+      margin-top: rem(80);
+      font-size: em(14);
+    }
+    .footer li {
+      display: block;
+      margin-right: 0;
     }
 }
