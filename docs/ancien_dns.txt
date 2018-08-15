@@ -1,0 +1,19 @@
+Serveur DNS :
+ns12.ovh.net	
+dns12.ovh.net
+
+
+$TTL 3600
+@	IN SOA dns12.ovh.net. tech.ovh.net. (2017091100 86400 3600 3600000 300)
+                          IN NS     ns12.ovh.net.
+                          IN NS     dns12.ovh.net.
+                          IN MX 1   redirect.ovh.net.
+                          IN A      192.30.252.154
+                          IN A      192.30.252.153
+                          IN TXT    "1|www.circlefloow.com"
+                      600 IN TXT    "v=spf1 include:mx.ovh.com ~all"
+_autodiscover._tcp        IN SRV    0 0 443 mailconfig.ovh.net.
+_imaps._tcp               IN SRV    0 0 993 ssl0.ovh.net.
+_submission._tcp          IN SRV    0 0 465 ssl0.ovh.net.
+www                       IN TXT    "3|welcome"
+www                       IN TXT    "l|fr"
